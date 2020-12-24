@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>じゅんやのポートフォリオ</title>
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+		integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js">
+	</script>
+
+
+	<link rel="stylesheet" href="css/ress.css">
+	<link rel="stylesheet" href="css/contact.css">
+
+</head>
+<header class="header">
+	<div class="headerInner">
+		<h1><a href="index.html">ぽーとふぉりお</a></h1>
+		<div class="pageLink">
+			<ul>
+				<li><a href="about.html">自己紹介</a></li>
+				<li><a href="portfolio.html">作品</a></li>
+				<li><a href="contact.html">お問い合わせ<a></a></li>
+			</ul>
+		</div>
+		<div class="hambarger"><i class="fas ham fa-angle-double-right"></i><i
+				class="fas hamclose fa-angle-double-left"></i></div>
+	</div>
+</header>
+
+<body class='aboutBody'>
+	<div class="background">
+		<main>
+			<h1 class="title">お問い合わせ</h1>
+			<div class="commentFlame">
+				<p class="comment">私のポートフォリオ、楽しんでいただけましたでしょうか。<br>もしよろしければ感想、ご指摘、頂けると本当にうれしいです。</p>
+				<p class='comment2'>またトップページのタイトルをクリックしていただくと<br>色々なアニメーション等がございますのでぜひ遊んでみてください。</p>
+			</div>
+			<form
+				action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSfGrTSKOxz6ErGn7oSgjN3XcAdvWzbScxemd5qH6EEccVduyA/formResponse?embedded=true"
+				method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+				<ul>
+					<li><input type="text" class="name" required="required" placeholder="お名前 ※必須"
+							name="entry.1618478142" value=""></li>
+					<li><input type="text" name="entry.1864595011" value="" class="mail" placeholder="メールアドレス"></li>
+					<li><textarea type="text" name="entry.600970320" value="" class="contact" required="required"
+							placeholder="感想　お問い合わせ　※必須"></textarea></li>
+					<li><input class="submitButton" type="submit"></li>
+
+				</ul>
+			</form>
+			<script type="text/javascript">
+				var submitted = false;
+			</script>
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+				onload="if(submitted){window.location='contact.html';}"></iframe>
+		</main>
+
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>

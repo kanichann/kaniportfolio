@@ -1,0 +1,38 @@
+
+.categorys{
+
+
+ & .char{
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-70%);
+}
+}
+
+.categorys.inview{
+    & .char{
+        animation: kf-textanimation;
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
+
+      @for $i from 1 through 9 {
+          &:nth-child(#{$i}) {
+              animation-delay: $i *0.04s;
+          }
+      }
+    }
+
+}
+
+
+@keyframes kf-textanimation{
+    0%{
+        opacity: 0;
+        transform:translateY(-70%);
+    };
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}

@@ -1,0 +1,436 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('../font.ttf');
+}
+
+@font-face {
+  font-family: 'MyFont2';
+  src: url('../font2.ttf');
+}
+
+body {
+  color: #333;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  font-family: 'MyFont', 'メイリオ', 'ＭＳ Ｐゴシック', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 2px;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  /* 画像落下時に下に伸びることを防ぐ */
+}
+
+
+main {
+  color: white;
+  text-align: center;
+  z-index: 20;
+
+}
+
+.title {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto auto;
+  top: -100px;
+  opacity: 0;
+  font-weight: 900;
+  width: 100%;
+  height: 86%;
+  text-align: center;
+
+}
+
+.sub-title-main {
+  font-size: 80px;
+  text-shadow: 4px 3px black;
+}
+
+.span-drop {
+  transform: rotate(-120deg);
+  transition: transform 0.7s;
+}
+
+.leftside {
+  transform: translateX(0%);
+  transition: transform 1s;
+}
+
+.sub-title-main span:nth-child(5) {
+
+  font-size: 70px;
+  padding-left: 20px;
+}
+
+.main-title-inner {
+  text-shadow: 5px 4px black;
+  font-size: 100px;
+  width: auto;
+  height: 100px;
+  display: block;
+
+
+}
+
+.main-title-inner span,
+.sub-title-main span {
+  transition: 0.55;
+}
+
+.spanhover:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.hoverremove:hover {
+  opacity: 1;
+  cursor: initial;
+}
+
+.menu {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1.5;
+  font-size: 25px;
+  width: 200px;
+  height: 150px;
+}
+
+.menu li {
+  position: relative;
+  width: 100%;
+  height: 25%;
+}
+
+.menu-button {
+
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  height: 100%;
+  display: block;
+  width: auto;
+  white-space: nowrap;
+}
+
+.leftside {
+  transform: translateX(0%);
+  transition: transform 1s;
+}
+
+.menu a:hover {
+  border-bottom: black 3px solid;
+}
+
+.bg-comment {
+
+  font-size: 15px;
+  display: none;
+  position: absolute;
+  width: 35%;
+  height: 30%;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  image-rendering: pixelated;
+
+}
+
+.bg-flame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-comment img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-comment-inner {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  letter-spacing: 2px;
+  top: 0;
+  left: 0;
+  padding: 30px 0 0 30px;
+  z-index: 30;
+}
+
+.secret {
+  text-align: left;
+  font-size: 20px;
+  display: flex;
+}
+
+.secret {
+  display: block;
+}
+
+.secret span {
+  opacity: 0;
+
+}
+
+
+/* ポップアップ背景 */
+.popupBg {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.popupBg img {
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+.bg-color,
+.bg-color2 {
+
+  width: 51%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.bg-color {
+  left: 0;
+
+}
+
+.bg-color2 {
+  right: 0;
+
+}
+
+/* スタンプ */
+.stamp {
+  z-index: -1;
+  position: absolute;
+  display: block;
+  font-size: 30px;
+  color: #FF70A8;
+}
+
+.stampalart {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  left: 0;
+  top: -60px;
+  font-size: 20px;
+  color: black;
+  font-family: initial;
+  background-color: white;
+  text-align: center;
+  border-bottom: black solid 1px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0, 6);
+}
+
+/* コメント欄の調整 */
+.secret li {
+  line-height: 1.6;
+}
+
+/* おを光らせる */
+.flash {
+  animation: flash 1.2s infinite;
+}
+
+@keyframes flash {
+  0% {
+    color: #5BE612
+  }
+
+  20% {
+    color: #FFCA05
+  }
+
+  40% {
+    color: #FF1C01
+  }
+
+  60% {
+    color: #4600FF
+  }
+
+  80% {
+    color: #09B5E6
+  }
+
+  100% {
+    color: #5BE612
+  }
+}
+
+/* 震わせる */
+.shake {
+  animation: shake 4s;
+}
+
+@keyframes shake {
+  0% {
+    transform: scale(1.0, 1.0) translate(0%, 0%);
+  }
+
+  10% {
+    transform: scale(1.1, 0.9) translate(0%, 5%);
+  }
+
+  40% {
+    transform: scale(1.2, 0.8) translate(0%, 15%);
+  }
+
+  50% {
+    transform: scale(1.0, 1.0) translate(0%, 0%);
+  }
+
+  60% {
+    transform: scale(0.9, 1.2) translate(0%, -100%);
+  }
+
+  75% {
+    transform: scale(0.9, 1.2) translate(0%, -20%);
+  }
+
+  85% {
+    transform: scale(1.2, 0.8) translate(0%, 15%);
+  }
+
+  100% {
+    transform: scale(1.0, 1.0) translate(0%, 0%);
+  }
+}
+
+/* ドリンクを落とす */
+.drinkdrop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+
+}
+
+.drink1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.drinkimg img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+}
+
+.drinkimg {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.drink1 .drinkimg {
+  display: inline-block;
+  top: -400px;
+  left: 50%;
+
+}
+
+/* ressetの表示場所 */
+.resset {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  color: black;
+  font-size: 50px;
+}
+
+.ressetinner span {
+  opacity: 0;
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+  .sub-title-main {
+    font-size: 40px;
+    text-shadow: 2px 1px black;
+  }
+
+  .sub-title-main span:nth-child(5) {
+    font-size: 35px;
+  }
+
+  .main-title-inner {
+    font-size: 45px;
+    margin-top: 25px;
+    text-shadow: 2px 1px black;
+  }
+
+  .menu {
+    font-size: 20px;
+  }
+
+  .stampalart {
+    font-size: 15px;
+    line-height: initial;
+  }
+
+  .stampalart p {
+    display: block;
+    height: 100%;
+    margin-top: 10px;
+  }
+
+  .menu {
+    width: 20%;
+    bottom: 0;
+  }
+
+  .resset {
+
+    top: 35%;
+    font-size: 40px;
+    width: 100%;
+  }
+
+  .bg-comment {
+    width: 70%;
+    bottom: 180px;
+  }
+
+  .secret {
+    font-size: 15px;
+  }
+
+  .bg-comment-inner {
+    padding: 20px 20px 0 20px;
+
+  }

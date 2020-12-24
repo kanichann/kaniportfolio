@@ -1,0 +1,358 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('../font.ttf');
+}
+
+@font-face {
+  font-family: 'MyFont2';
+  src: url('../font2.ttf');
+}
+
+body {
+  color: #333;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  font-family: 'MyFont2', 'メイリオ', 'ＭＳ Ｐゴシック', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 2px;
+  background-color: #66E888;
+  opacity: 0;
+}
+
+.background {
+  padding: 0 15%;
+  height: 100%;
+  width: 100%;
+}
+
+
+.header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 50px;
+  padding: 0 15%;
+  width: 100%;
+  background-color: black;
+  border-bottom: white 2px solid;
+  box-shadow: 1px 5px 6px rgba(0, 0, 0, .3);
+  vertical-align: baseline;
+
+
+}
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 50px;
+  padding: 15px 0;
+}
+
+.header h1 {
+  display: inline-block;
+}
+
+.header h1 a {
+
+  font-size: 25px;
+  color: #ffff7d;
+  font-family: MyFont;
+}
+
+.header ul {
+
+  display: inline-block;
+}
+
+.header ul li {
+  padding-left: 20px;
+  display: inline-block;
+  font-size: 16px;
+  font-family: MyFont;
+}
+
+header ul li:nth-child(1) a {
+  color: #70D3FF;
+}
+
+header ul li:nth-child(2) a {
+  color: #66E888;
+}
+
+header ul li:nth-child(3) a {
+  color: #FF8474;
+}
+
+.title {
+  color: white;
+  text-shadow: 1px 1px black;
+  display: block;
+  margin-top: 75px;
+  font-size: 42px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+  font-family: Myfont;
+  margin-bottom: 40px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.slideshow {
+  background-color: white;
+  height: 465px;
+  margin: 0 15%;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.slideshow-slides {
+  height: 100%;
+  position: absolute;
+  width: 64%;
+  padding: 0 15%;
+  margin-left: 18%;
+}
+
+.slide {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  padding: 4%
+}
+
+.slideshow-slides .slide img {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 84%;
+  height: 50%;
+  border: black 1px solid;
+}
+
+.slideshow-nav a {
+  position: absolute;
+  top: 45%;
+  width: 42px;
+  height: 42px;
+}
+
+.slideshow-nav a:hover {
+  opacity: 0.5;
+}
+
+.prev {
+  left: 2%;
+}
+
+.next {
+  right: 2%
+}
+
+.slideshow-nav a.disabled {
+  display: none;
+}
+
+.slideshow-indicator {
+  bottom: 30px;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.slideshow-indicator a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 16;
+  margin-left: 5px;
+  padding: 3px 0 0 2.5px;
+}
+
+.slideshow-indicator a.active {
+  cursor: default;
+}
+
+.active {
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+}
+
+.slide-skill {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 58%;
+  width: 100%;
+  text-align: center;
+  width: 80%;
+}
+
+.slide-HTML {
+  background-color: rgb(236, 182, 82);
+}
+
+.slide-css {
+  background-color: rgb(82, 218, 236);
+}
+
+.slide-js {
+  background-color: rgb(82, 92, 236);
+}
+
+.slide p {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 14px;
+  padding: 2px 2px 2px 4px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.slide-expression {}
+
+.skillFlame {
+  margin-bottom: 30px;
+
+}
+
+.ham {
+  color: white;
+  font-size: 23px;
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px
+}
+
+.hamclose {
+  color: white;
+  font-size: 23px;
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px
+}
+
+.hambarger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0;
+    height: 35px;
+  }
+
+  .background {
+    padding: 0 5px;
+  }
+
+  .title {
+    margin-top: 60px;
+    font-size: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .headerInner {
+    height: 35px;
+    padding: 7px 0;
+  }
+
+  .header h1 {
+    padding-left: 5px;
+  }
+
+  .header h1 a {
+
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .hambarger {
+    display: block;
+  }
+
+  .pageLink {
+    position: fixed;
+    top: 35px;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.4s;
+    background-color: rgba(0, 0, 0, .8);
+  }
+
+  .pageLink ul {
+    margin-top: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .pageLink ul li {
+    font-size: 23px;
+    margin-top: 35px;
+  }
+
+  .hamclose {
+    display: none;
+    color: white;
+  }
+
+  /* js変更箇所 */
+  .toggleham {
+    left: 0;
+  }
+
+  .isActive {
+    display: block;
+    transition: 0.4s;
+  }
+
+  .disActive {
+    display: none;
+    transition: 0.4s;
+  }
+
+  img {
+    margin-top: 20px;
+  }
+
+  .slideshow {
+    margin: 0 5px 15px 5px;
+  }
+
+  .slideshow-slides .slide img {
+    width: 84%;
+    height: 33%;
+  }
+
+  .slide-skill {
+    top: 42%;
+  }
+
+  .skillFlame {
+    height: 45px;
+  }
+}

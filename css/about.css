@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('../font.ttf');
+}
+
+@font-face {
+  font-family: 'MyFont2';
+  src: url('../font2.ttf');
+}
+
+body {
+  color: #333;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  font-family: 'MyFont2', 'メイリオ', 'ＭＳ Ｐゴシック', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 2px;
+  background-color: #70D3FF;
+  opacity: 0;
+}
+
+.background {
+  padding: 0 15%;
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid black;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 50px;
+  padding: 0 15%;
+  width: 100%;
+  background-color: black;
+  border-bottom: white 2px solid;
+  box-shadow: 1px 5px 6px rgba(0, 0, 0, .3);
+  vertical-align: baseline;
+
+
+}
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 50px;
+  padding: 15px 0;
+}
+
+.header h1 {
+  display: inline-block;
+}
+
+.header h1 a {
+
+  font-size: 25px;
+  color: #ffff7d;
+  font-family: MyFont;
+}
+
+.header ul {
+
+  display: inline-block;
+}
+
+.header ul li {
+  padding-left: 20px;
+  display: inline-block;
+  font-size: 16px;
+  font-family: MyFont;
+}
+
+header ul li:nth-child(1) a {
+  color: #70D3FF;
+}
+
+header ul li:nth-child(2) a {
+  color: #66E888;
+}
+
+header ul li:nth-child(3) a {
+  color: #FF8474;
+}
+
+.title {
+  color: white;
+  text-shadow: 1px 1px black;
+  display: block;
+  margin-top: 75px;
+  font-size: 42px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+  font-family: Myfont;
+  margin-bottom: 40px;
+}
+
+.aboutFlame {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.aboutimg {
+  padding-right: 40px;
+  width: 45%;
+  border-radius: 50%;
+  display: block;
+  padding: 30px;
+  margin-right: 50px;
+}
+
+.mainAboutFlame {
+  border: 2px black solid;
+  border-radius: 5px;
+  background-color: white;
+  width: calc(100% - 45% - 40px);
+  height: 100%;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.mainAbout {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.mainAbout h1 {
+  margin-top: 30px;
+  font-size: 30px;
+  display: inline-block;
+}
+
+.name {
+  font-size: 20px;
+  display: inline-block;
+}
+
+.aboutme {
+  padding: 35px 0 35px;
+  font-size: 18px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid black;
+  font-size: 22px;
+}
+
+.category {
+  padding-left: 20px;
+}
+
+.detail {
+  padding-right: 30px
+}
+
+.iconColor {
+  color: black;
+}
+
+.skillsTitle {
+  padding-left: 20px;
+  font-size: 22px;
+  padding-bottom: 6px;
+}
+
+.skillsItem {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 40px;
+
+}
+
+.skill-detail {
+  display: block;
+  font-size: 25px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+}
+
+.ham {
+  color: white;
+  font-size: 23px;
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px
+}
+
+.hamclose {
+  color: white;
+  font-size: 23px;
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px
+}
+
+.hambarger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0;
+    height: 35px;
+  }
+
+  .background {
+    padding: 0 5px;
+  }
+
+  .title {
+    margin-top: 60px;
+    font-size: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .headerInner {
+    height: 35px;
+    padding: 7px 0;
+  }
+
+  .header h1 {
+    padding-left: 5px;
+  }
+
+  .header h1 a {
+
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .hambarger {
+    display: block;
+  }
+
+  .pageLink {
+    position: fixed;
+    top: 35px;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.4s;
+    background-color: rgba(0, 0, 0, .8);
+  }
+
+  .pageLink ul {
+    margin-top: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .pageLink ul li {
+    font-size: 23px;
+    margin-top: 35px;
+  }
+
+  .hamclose {
+    display: none;
+    color: white;
+  }
+
+  /* js変更箇所 */
+  .toggleham {
+    left: 0;
+  }
+
+  .isActive {
+    display: block;
+    transition: 0.4s;
+  }
+
+  .disActive {
+    display: none;
+    transition: 0.4s;
+  }
+
+
+
+  .aboutFlame {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .aboutimg {
+    width: 100%;
+    margin-right: 0;
+
+  }
+
+  .mainAboutFlame {
+    width: 100%;
+
+  }
+}

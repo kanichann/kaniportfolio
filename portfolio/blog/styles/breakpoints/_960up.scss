@@ -1,0 +1,86 @@
+/******************************************************************
+
+Stylesheet: 960px以上のモニタで適用
+
+******************************************************************/
+body{
+    letter-spacing: 1px;
+}
+.font-sm {
+    font-size: 16px;
+  }
+  .font-md {
+    font-size: 19px;
+  }
+  .font-lr {
+    font-size: 23px;
+  }
+  .font-lg {
+    font-size: 52px;
+  }
+  .mb-lg {
+    margin-bottom: 150px !important;
+  }
+  .mg-md {
+    margin-bottom: 80px !important;
+  }
+  .pb-md {
+    padding-bottom: 80px !important;
+  }
+  .pb-lg {
+    padding-bottom: 150px !important;
+  }
+  .blog-pd{
+      padding:30px;
+  }
+
+
+  .top{
+    margin-top: 50px;
+    margin-bottom:30px
+}
+
+.blog{
+
+  &__left{
+    padding-top:42px;
+  }
+  
+  &__right{
+    margin-top:42px;
+    padding: 0 3%;
+  }
+  &__title{
+
+      padding-bottom: 15px;
+  }
+
+
+
+  
+
+  &__img{
+      width:520px;
+      height:300px;
+  }
+
+}
+
+
+.pickup{
+ &__category{
+  
+    top: 0px;
+    }
+}
+
+.about{
+  &__left{
+    padding-top: 30px;
+  }
+}
+.author{
+  &__category{
+    top:-43px;
+  }
+}
